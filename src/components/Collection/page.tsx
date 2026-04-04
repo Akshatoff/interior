@@ -1,8 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 
-const CollectionCard = ({ title, image, heightClass, className }) => (
+// 1. Define the TypeScript interface for your props
+interface CollectionCardProps {
+  title: string;
+  image: string;
+  heightClass: string;
+  className?: string; // The '?' makes this prop optional
+}
+
+// 2. Apply the interface to the component
+const CollectionCard: React.FC<CollectionCardProps> = ({
+  title,
+  image,
+  heightClass,
+  className = "", // Provide a default empty string
+}) => (
   <div
     className={`col-card relative rounded-[2rem] overflow-hidden group w-full ${heightClass} ${className}`}
   >
@@ -15,14 +29,14 @@ const CollectionCard = ({ title, image, heightClass, className }) => (
     <div className="absolute bottom-0 p-6 flex justify-between items-end w-full">
       <h3 className="text-white text-2xl font-medium">{title}</h3>
       <div className="bg-white/90 p-2 rounded-full">
-        <ArrowUpRight size={20} />
+        <ArrowUpRight size={20} className="text-black" />
       </div>
     </div>
   </div>
 );
 
 export default function CollectionSection() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null); // Add HTML type for the ref
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -51,20 +65,22 @@ export default function CollectionSection() {
     <section ref={sectionRef} className="bg-[#f0f0f0] py-24 px-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-16">
-          <h2 className="col-text text-6xl font-semibold leading-tight max-w-lg">
+          <h2 className="col-text text-6xl font-semibold leading-tight max-w-lg text-gray-900">
             Explore Our Proudly Collection
           </h2>
           <div className="flex flex-col items-end gap-6 max-w-sm text-right">
-            <button className="col-text flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-xs">
+            <button className="col-text flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-xs hover:bg-gray-800 transition-colors">
               View More <ArrowRight size={14} />
             </button>
             <p className="col-text text-gray-600 text-sm">
-              Poliform will showcase its vision of contemporary architecture...
+              Poliform will showcase its vision of contemporary architecture,
+              interior design trends, and innovative living at Salone del
+              Mobile.Milano 2024.
             </p>
           </div>
         </div>
 
-        <div className="col-grid grid grid-cols-3 gap-6">
+        <div className="col-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col gap-6">
             <CollectionCard
               title="Mondrian"

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
-import gsap from 'gsap';
+import { useEffect, useRef } from "react";
+import { ArrowRight } from "lucide-react";
+import gsap from "gsap";
 
 export default function FeatureSection() {
   const sectionRef = useRef(null);
@@ -11,12 +11,24 @@ export default function FeatureSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
-        }
+        },
       });
 
-      tl.from(".feat-image", { clipPath: "inset(100% 0% 0% 0%)", duration: 1.5, ease: "power4.inOut" })
-        .from(".feat-img-inner", { scale: 1.2, duration: 1.5, ease: "power3.out" }, "-=1.5")
-        .from(".feat-text", { y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out" }, "-=1");
+      tl.from(".feat-image", {
+        clipPath: "inset(100% 0% 0% 0%)",
+        duration: 1.5,
+        ease: "power4.inOut",
+      })
+        .from(
+          ".feat-img-inner",
+          { scale: 1.2, duration: 1.5, ease: "power3.out" },
+          "-=1.5",
+        )
+        .from(
+          ".feat-text",
+          { y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out" },
+          "-=1",
+        );
     }, sectionRef);
     return () => ctx.revert();
   }, []);
@@ -32,12 +44,15 @@ export default function FeatureSection() {
           />
         </div>
         <div className="flex flex-col justify-center max-w-xl">
-          <p className="feat-text text-sm font-semibold tracking-wide mb-6">Elegance • Timeless</p>
+          <p className="feat-text text-sm font-semibold tracking-wide mb-6">
+            Elegance • Timeless
+          </p>
           <h2 className="feat-text text-6xl font-semibold leading-[1.1] tracking-tight mb-8">
             Modern Style <br /> Timeless Charm
           </h2>
           <p className="feat-text text-gray-600 text-lg leading-relaxed mb-10">
-            Discover Poliform's 2024 preview, featuring sofas, chairs, and armchairs...
+            Discover Poliform's 2024 preview, featuring sofas, chairs, and
+            armchairs...
           </p>
           <div className="feat-text">
             <button className="flex items-center gap-3 bg-black text-white px-6 py-3.5 rounded-full text-sm">

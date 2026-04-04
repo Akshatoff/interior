@@ -1,15 +1,12 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from "lucide-react";
 
 const About = () => {
   return (
     // The background color matches the warm, off-white aesthetic
     <section className="bg-[#f4f3ef] min-h-screen p-4 md:p-8 lg:p-12 font-sans text-gray-900">
       <div className="max-w-7xl mx-auto">
-
         {/* Top Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-16">
-
           {/* Left Main Image Area */}
           <div className="lg:col-span-8 relative rounded-[2.5rem] h-[500px] lg:h-[650px] overflow-hidden bg-gray-200">
             <img
@@ -35,7 +32,6 @@ const About = () => {
 
           {/* Right Column Grid */}
           <div className="lg:col-span-4 flex flex-col gap-6 h-full">
-
             {/* Top Text Card */}
             <div className="bg-[#e8e6e1] rounded-[2.5rem] p-8 md:p-10 flex-1 flex flex-col justify-center">
               <div className="inline-block border border-gray-400/80 rounded-full px-4 py-1.5 text-sm font-medium w-max mb-6">
@@ -71,12 +67,11 @@ const About = () => {
                 {/* Action Button */}
                 <div className="self-end mt-auto">
                   <div className="bg-black text-white p-4 rounded-full shadow-lg hover:bg-gray-800 transition-colors transform hover:-translate-y-1">
-                     <ArrowUpRight size={24} strokeWidth={2.5} />
+                    <ArrowUpRight size={24} strokeWidth={2.5} />
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -84,31 +79,47 @@ const About = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center pt-6 lg:pt-12">
           {/* Stat 1 */}
           <div className="flex flex-col items-center">
-            <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">500+</div>
-            <div className="text-gray-500 font-medium text-sm md:text-base">Products</div>
+            <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">
+              500+
+            </div>
+            <div className="text-gray-500 font-medium text-sm md:text-base">
+              Products
+            </div>
           </div>
 
           {/* Stat 2 */}
           <div className="flex flex-col items-center">
-            <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">20+</div>
-            <div className="text-gray-500 font-medium text-sm md:text-base">Projects</div>
+            <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">
+              20+
+            </div>
+            <div className="text-gray-500 font-medium text-sm md:text-base">
+              Projects
+            </div>
           </div>
 
           {/* Stat 3 */}
           <div className="flex flex-col items-center">
-            <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">50+</div>
-            <div className="text-gray-500 font-medium text-sm md:text-base">Satisfied Customers</div>
+            <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">
+              50+
+            </div>
+            <div className="text-gray-500 font-medium text-sm md:text-base">
+              Satisfied Customers
+            </div>
           </div>
 
           {/* Stat 4 */}
           <div className="flex flex-col items-center">
             <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 flex justify-center items-start tracking-tight">
-              1<span className="text-3xl md:text-4xl mt-1.5 font-medium">st</span>
+              1
+              <span className="text-3xl md:text-4xl mt-1.5 font-medium">
+                st
+              </span>
             </div>
-            <div className="text-gray-500 font-medium text-sm md:text-base">Top 1 in Paris</div>
+            <div className="text-gray-500 font-medium text-sm md:text-base">
+              Top 1 in Paris
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );
