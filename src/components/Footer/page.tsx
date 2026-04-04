@@ -1,34 +1,63 @@
-function Footer() {
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+
+export default function Footer() {
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      // Parallax on the image
+      gsap.to(".footer-img", {
+        yPercent: 20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // Text reveal
+      gsap.from(".ft-text", {
+        scrollTrigger: { trigger: footerRef.current, start: "top 80%" },
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power3.out",
+      });
+    }, footerRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <footer className="bg-black text-white py-20 px-10 md:px-20">
+    <footer
+      ref={footerRef}
+      className="bg-black text-white py-20 px-20 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
-          {/* Left: Text Content */}
+        <div className="grid grid-cols-2 gap-16 mb-24">
           <div>
-            <h2 className="text-6xl md:text-7xl font-semibold mb-10 tracking-tight">
+            <h2 className="ft-text text-7xl font-semibold mb-10 tracking-tight">
               Engage with Us in <br /> Conversation.
             </h2>
-            <p className="text-gray-400 text-sm md:text-base max-w-md leading-relaxed">
-              In a global world based on communication, a brand must look beyond
-              its borders, open up to new experiences, and dare to be different.
-              Meeting the brightest minds of one's time is the most effective
-              way to nurture creativity.
+            <p className="ft-text text-gray-400 text-base max-w-md">
+              In a global world based on communication...
             </p>
           </div>
-
-          {/* Right: Featured Image */}
           <div className="rounded-[2.5rem] overflow-hidden h-[350px]">
             <img
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200"
-              alt="Conversation Space"
-              className="w-full h-full object-cover"
+              alt="Conversation"
+              className="footer-img w-full h-[120%] object-cover -mt-[10%]"
             />
           </div>
         </div>
 
-        {/* Links Grid */}
+        {/* Links Grid setup (reuse from previous code, add 'ft-text' class to columns) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 relative">
-          <div>
+          <div className="ft-text">
             <h4 className="font-semibold mb-6 text-lg">About</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="hover:text-white cursor-pointer transition-colors">
@@ -49,7 +78,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="ft-text">
             <h4 className="font-semibold mb-6 text-lg">Customer Service</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="hover:text-white cursor-pointer transition-colors">
@@ -70,7 +99,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="ft-text">
             <h4 className="font-semibold mb-6 text-lg">Social Media</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="hover:text-white cursor-pointer transition-colors">
@@ -86,7 +115,7 @@ function Footer() {
           </div>
 
           {/* Large Brand Mark */}
-          <div className="flex items-end justify-end col-span-full md:col-span-1">
+          <div className="flex items-end justify-end col-span-full md:col-span-1 ft-text">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tighter opacity-100">
               Poliform
             </h1>
@@ -96,4 +125,3 @@ function Footer() {
     </footer>
   );
 }
-export default Footer;

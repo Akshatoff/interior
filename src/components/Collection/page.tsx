@@ -1,57 +1,70 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import gsap from "gsap";
 
-// Reusable Card Component for the Grid
-const CollectionCard = ({ title, image, heightClass }) => (
+const CollectionCard = ({ title, image, heightClass, className }) => (
   <div
-    className={`relative rounded-[2rem] overflow-hidden group cursor-pointer w-full ${heightClass}`}
+    className={`col-card relative rounded-[2rem] overflow-hidden group w-full ${heightClass} ${className}`}
   >
     <img
       src={image}
       alt={title}
-      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      className="absolute inset-0 w-full h-full object-cover"
     />
-    {/* Gradient overlay for text readability */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 opacity-80 group-hover:opacity-100" />
-
-    <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
-      <h3 className="text-white text-2xl font-medium tracking-wide">{title}</h3>
-      <div className="bg-white/90 backdrop-blur-sm text-black p-2 rounded-full transform transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-        <ArrowUpRight size={20} strokeWidth={2.5} />
+    <div className="absolute inset-0 bg-black/30" />
+    <div className="absolute bottom-0 p-6 flex justify-between items-end w-full">
+      <h3 className="text-white text-2xl font-medium">{title}</h3>
+      <div className="bg-white/90 p-2 rounded-full">
+        <ArrowUpRight size={20} />
       </div>
     </div>
   </div>
 );
 
-const Collection = () => {
+export default function CollectionSection() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".col-text", {
+        scrollTrigger: { trigger: sectionRef.current, start: "top 80%" },
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power3.out",
+      });
+
+      gsap.from(".col-card", {
+        scrollTrigger: { trigger: ".col-grid", start: "top 75%" },
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out",
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="bg-[#f0f0f0] py-16 md:py-24 px-4 md:px-8 lg:px-12 font-sans text-gray-900">
+    <section ref={sectionRef} className="bg-[#f0f0f0] py-24 px-12">
       <div className="max-w-7xl mx-auto">
-        {/* Header Area */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
-          <h2 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight max-w-lg">
+        <div className="flex justify-between items-end mb-16">
+          <h2 className="col-text text-6xl font-semibold leading-tight max-w-lg">
             Explore Our Proudly Collection
           </h2>
-
-          <div className="flex flex-col items-start lg:items-end gap-6 max-w-sm text-right lg:text-right">
-            <button className="flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-xs font-medium hover:bg-gray-800 transition-colors group">
-              View More
-              <ArrowRight
-                size={14}
-                className="transform transition-transform group-hover:translate-x-1"
-              />
+          <div className="flex flex-col items-end gap-6 max-w-sm text-right">
+            <button className="col-text flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-xs">
+              View More <ArrowRight size={14} />
             </button>
-            <p className="text-gray-600 text-sm leading-relaxed lg:text-right">
-              Poliform will showcase its vision of contemporary architecture,
-              interior design trends, and innovative living at Salone del
-              Mobile.Milano 2024.
+            <p className="col-text text-gray-600 text-sm">
+              Poliform will showcase its vision of contemporary architecture...
             </p>
           </div>
         </div>
 
-        {/* Masonry Grid Area */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Column 1 */}
+        <div className="col-grid grid grid-cols-3 gap-6">
           <div className="flex flex-col gap-6">
             <CollectionCard
               title="Mondrian"
@@ -64,8 +77,6 @@ const Collection = () => {
               heightClass="h-[450px]"
             />
           </div>
-
-          {/* Column 2 */}
           <div className="flex flex-col gap-6">
             <CollectionCard
               title="Nirnia"
@@ -78,8 +89,6 @@ const Collection = () => {
               heightClass="h-[300px]"
             />
           </div>
-
-          {/* Column 3 */}
           <div className="flex flex-col gap-6">
             <CollectionCard
               title="Artex"
@@ -96,6 +105,4 @@ const Collection = () => {
       </div>
     </section>
   );
-};
-
-export default Collection;
+}
