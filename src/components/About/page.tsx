@@ -10,7 +10,7 @@ const About = () => {
           {/* Left Main Image Area */}
           <div className="lg:col-span-8 relative rounded-[2.5rem] h-[500px] lg:h-[650px] overflow-hidden bg-gray-200">
             <img
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000"
+              src="/about.jpeg"
               alt="Modern Minimalist Interior"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -25,7 +25,7 @@ const About = () => {
               </div>
               {/* Title */}
               <h1 className="text-5xl md:text-7xl font-semibold leading-[1.1] tracking-tight">
-                Modern <br /> Minimalist
+                About <br /> Us
               </h1>
             </div>
           </div>
@@ -38,10 +38,10 @@ const About = () => {
                 Aesthetic
               </div>
               <p className="text-gray-700 font-medium text-sm md:text-base mb-6 max-w-[250px] leading-relaxed">
-                Aesthetic furniture where every piece tells a story of style
+                A Beautiful Day Begins With A Beautiful Mindset
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight">
-                Into a gallery <br /> of elegance
+                Crafting a beautiful <br /> mindset
               </h2>
             </div>
 
@@ -80,30 +80,30 @@ const About = () => {
           {/* Stat 1 */}
           <div className="flex flex-col items-center">
             <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">
-              500+
+              100%
             </div>
             <div className="text-gray-500 font-medium text-sm md:text-base">
-              Products
+              Customer Satisfaction
             </div>
           </div>
 
           {/* Stat 2 */}
           <div className="flex flex-col items-center">
             <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">
-              20+
+              100+
             </div>
             <div className="text-gray-500 font-medium text-sm md:text-base">
-              Projects
+              Projects Done
             </div>
           </div>
 
           {/* Stat 3 */}
           <div className="flex flex-col items-center">
             <div className="text-5xl md:text-6xl font-medium mb-3 text-gray-900 tracking-tight">
-              50+
+              100%
             </div>
             <div className="text-gray-500 font-medium text-sm md:text-base">
-              Satisfied Customers
+              High Quality Works
             </div>
           </div>
 
@@ -116,7 +116,7 @@ const About = () => {
               </span>
             </div>
             <div className="text-gray-500 font-medium text-sm md:text-base">
-              Top 1 in Paris
+              Top 1 in Residential Project
             </div>
           </div>
         </div>

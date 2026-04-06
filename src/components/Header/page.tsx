@@ -36,12 +36,12 @@ export default function Header() {
       className="flex justify-between w-full px-6 md:px-10 items-center py-5 md:py-6 bg-[#f4f3ef] relative z-50"
     >
       <h1 className="nav-item text-2xl md:text-3xl font-bold tracking-tighter">
-        Poliform
+        Pratyush Interior
       </h1>
 
       {/* Desktop Navigation */}
       <ul className="hidden md:flex flex-row gap-8 list-none text-sm font-medium uppercase tracking-widest">
-        {["Product", "Lifestyle", "News", "Projects"].map((item) => (
+        {["Home", "About", "Services", "Portfolio"].map((item) => (
           <li
             key={item}
             className="nav-item cursor-pointer hover:opacity-60 transition-opacity"
@@ -62,7 +62,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-[#f4f3ef] flex flex-col items-center py-6 gap-6 md:hidden shadow-md">
-          {["Product", "Lifestyle", "News", "Projects"].map((item) => (
+          {["Home", "About", "Services", "Portfolio"].map((item) => (
             <div
               key={item}
               className="text-sm font-medium uppercase tracking-widest cursor-pointer hover:opacity-60"

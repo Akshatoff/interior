@@ -44,18 +44,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 mb-16 md:mb-24">
           <div>
             <h2 className="ft-text text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 md:mb-10 tracking-tight leading-tight">
-              Engage with Us in <br className="hidden md:block" /> Conversation.
+              Talk to <br className="hidden md:block" /> Pratyush Interiors.
             </h2>
             <p className="ft-text text-gray-400 text-sm md:text-base max-w-md leading-relaxed">
-              In a global world based on communication, a brand must look beyond
-              its borders, open up to new experiences, and dare to be different.
-              Meeting the brightest minds of one's time is the most effective
-              way to nurture creativity.
+              Unlock the full believable of your living spaces with our unique
+              design consultancy service. Our proficient team provides the best
+              solutions that enhance functionality and aesthetic to elevate your
+              home to the next level.
             </p>
           </div>
           <div className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden h-[250px] md:h-[350px]">
             <img
-              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200"
+              src="/foot.jpeg"
               alt="Conversation"
               className="footer-img w-full h-full md:h-[120%] object-cover md:-mt-[10%]"
             />
@@ -86,22 +86,22 @@ export default function Footer() {
           </div>
 
           <div className="ft-text">
-            <h4 className="font-semibold mb-5 text-lg">Customer Service</h4>
+            <h4 className="font-semibold mb-5 text-lg">Our Service</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="hover:text-white cursor-pointer transition-colors">
-                Prices and Payments
+                Residential Designing
               </li>
               <li className="hover:text-white cursor-pointer transition-colors">
-                Shipping
+                Offical Designing
               </li>
               <li className="hover:text-white cursor-pointer transition-colors">
-                Return Policy
+                Commercial Designing
               </li>
               <li className="hover:text-white cursor-pointer transition-colors">
-                Terms of Service
+                Modular kitchen
               </li>
               <li className="hover:text-white cursor-pointer transition-colors">
-                Privacy Policy
+                Modular Washroom
               </li>
             </ul>
           </div>
@@ -124,7 +124,7 @@ export default function Footer() {
           {/* Large Brand Mark */}
           <div className="flex items-end justify-start sm:justify-end col-span-1 sm:col-span-2 lg:col-span-1 ft-text pt-10 sm:pt-0">
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter opacity-100">
-              Poliform
+              Pratyush Interior
             </h1>
           </div>
         </div>

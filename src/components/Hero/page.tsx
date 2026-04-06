@@ -47,7 +47,7 @@ export default function Hero() {
         <div className="absolute inset-0 flex flex-col">
           <div className="flex-1 flex items-center justify-center pt-20 overflow-hidden">
             <h1 className="hero-title text-[12vw] font-bold text-white/80 leading-none pointer-events-none tracking-tighter">
-              Contemporary
+              PREMIUM
             </h1>
           </div>
 

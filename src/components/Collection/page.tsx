@@ -68,16 +68,15 @@ export default function CollectionSection() {
         {/* Responsive Header Wrapper: Stacks on mobile, sides on desktop */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-0 mb-12 md:mb-16">
           <h2 className="col-text text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-full lg:max-w-lg text-gray-900">
-            Explore Our Proudly Collection
+            Explore Our Proudly Specialisation
           </h2>
           <div className="flex flex-col items-start lg:items-end gap-5 max-w-sm text-left lg:text-right">
             <button className="col-text flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-xs hover:bg-gray-800 transition-colors">
               View More <ArrowRight size={14} />
             </button>
             <p className="col-text text-gray-600 text-sm leading-relaxed">
-              Poliform will showcase its vision of contemporary architecture,
-              interior design trends, and innovative living at Salone del
-              Mobile.Milano 2024.
+              Pratyush Interior will showcase its vision of contemporary architecture,
+              interior design trends, and innovative living.
             </p>
           </div>
         </div>
@@ -85,37 +84,37 @@ export default function CollectionSection() {
         <div className="col-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <div className="flex flex-col gap-4 md:gap-6">
             <CollectionCard
-              title="Mondrian"
-              image="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800"
+              title="Residential"
+              image="/res.jpeg"
               heightClass="h-[300px] md:h-[350px]"
             />
             <CollectionCard
-              title="Brera"
-              image="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&q=80&w=800"
+              title="Commercial"
+              image="/comm.jpeg"
               heightClass="h-[350px] md:h-[450px]"
             />
           </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <CollectionCard
-              title="Nirnia"
-              image="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800"
+              title="Office"
+              image="/office.jpeg"
               heightClass="h-[350px] md:h-[500px]"
             />
             <CollectionCard
-              title="Alea Pro"
-              image="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&q=80&w=800"
+              title="Kitchen"
+              image="/kit.jpeg"
               heightClass="h-[250px] md:h-[300px]"
             />
           </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <CollectionCard
-              title="Artex"
-              image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+              title="Washroom"
+              image=""
               heightClass="h-[300px] md:h-[350px]"
             />
             <CollectionCard
-              title="Nirnia"
-              image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800"
+              title="Hallway"
+              image="/hall.jpeg"
               heightClass="h-[350px] md:h-[450px]"
             />
           </div>
