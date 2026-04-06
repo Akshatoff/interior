@@ -37,18 +37,18 @@ export default function FeatureSection() {
   const processSteps = [
     {
       num: "01",
-      title: "Concept & Design",
-      desc: "Tailoring spatial aesthetics to your lifestyle.",
+      title: "Planning & Concept Creation",
+      desc: "Planning the Layout of The Area ",
     },
     {
       num: "02",
-      title: "Material Selection",
-      desc: "Sourcing premium, sustainable textures.",
+      title: "Design Development",
+      desc: "Manage all conecpts of individual spaces",
     },
     {
       num: "03",
-      title: "Master Craftsmanship",
-      desc: "Refining every detail with precision.",
+      title: "Build & Install",
+      desc: "Execution begins on site after concepts have been finalised",
     },
   ];
 

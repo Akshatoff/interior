@@ -61,9 +61,9 @@ export default function ContactSection() {
             <div className="contact-text">
               <h4 className="font-semibold text-gray-900 mb-2">Headquarters</h4>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Via Montesanto 28,
+                Via Jyoti Nagar D-96,
                 <br />
-                22044 Inverigo (CO), Italy
+                Shahdra 110094, New Delhi
               </p>
             </div>
             <div className="contact-text">

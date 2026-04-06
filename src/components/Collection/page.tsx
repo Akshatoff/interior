@@ -85,36 +85,36 @@ export default function CollectionSection() {
           <div className="flex flex-col gap-4 md:gap-6">
             <CollectionCard
               title="Residential"
-              image="/res.jpeg"
+              image="/res.jpg"
               heightClass="h-[300px] md:h-[350px]"
             />
             <CollectionCard
               title="Commercial"
-              image="/comm.jpeg"
+              image="/comm.jpg"
               heightClass="h-[350px] md:h-[450px]"
             />
           </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <CollectionCard
               title="Office"
-              image="/office.jpeg"
+              image="/off.jpg"
               heightClass="h-[350px] md:h-[500px]"
             />
             <CollectionCard
               title="Kitchen"
-              image="/kit.jpeg"
+              image="/kit.jpg"
               heightClass="h-[250px] md:h-[300px]"
             />
           </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <CollectionCard
               title="Washroom"
-              image=""
+              image="/wash.webp"
               heightClass="h-[300px] md:h-[350px]"
             />
             <CollectionCard
               title="Hallway"
-              image="/hall.jpeg"
+              image="/hall.jpg"
               heightClass="h-[350px] md:h-[450px]"
             />
           </div>
