@@ -9,6 +9,7 @@ import About from "./components/About/page";
 import Feature from "./components/Feature/page";
 import Collection from "./components/Collection/page";
 import Footer from "./components/Footer/page";
+import ContactSection from "./components/Contact/page";
 import "./App.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,6 +47,7 @@ function App() {
         <About />
         <Feature />
         <Collection />
+        <ContactSection></ContactSection>
       </main>
       <Footer />
     </div>
