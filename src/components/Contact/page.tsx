@@ -69,10 +69,10 @@ export default function ContactSection() {
             <div className="contact-text">
               <h4 className="font-semibold text-gray-900 mb-2">Contact</h4>
               <p className="text-gray-500 text-sm leading-relaxed mb-1">
-                info@poliform.it
+                info@pratyushinteriors.com{" "}
               </p>
               <p className="text-gray-500 text-sm leading-relaxed">
-                +39 031 6951
+                +919212160436{" "}
               </p>
             </div>
           </div>

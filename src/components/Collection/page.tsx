@@ -68,15 +68,15 @@ export default function CollectionSection() {
         {/* Responsive Header Wrapper: Stacks on mobile, sides on desktop */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-0 mb-12 md:mb-16">
           <h2 className="col-text text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-full lg:max-w-lg text-gray-900">
-            Explore Our Proudly Specialisation
+            Explore Our Proud Specialisation
           </h2>
           <div className="flex flex-col items-start lg:items-end gap-5 max-w-sm text-left lg:text-right">
             <button className="col-text flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-xs hover:bg-gray-800 transition-colors">
               View More <ArrowRight size={14} />
             </button>
             <p className="col-text text-gray-600 text-sm leading-relaxed">
-              Pratyush Interior will showcase its vision of contemporary architecture,
-              interior design trends, and innovative living.
+              Pratyush Interior will showcase its vision of contemporary
+              architecture, interior design trends, and innovative living.
             </p>
           </div>
         </div>

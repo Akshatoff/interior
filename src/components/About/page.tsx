@@ -10,7 +10,7 @@ const About = () => {
           {/* Left Main Image Area */}
           <div className="lg:col-span-8 relative rounded-[2.5rem] h-[500px] lg:h-[650px] overflow-hidden bg-gray-200">
             <img
-              src="/about.jpeg"
+              src="/about.jpg"
               alt="Modern Minimalist Interior"
               className="absolute inset-0 w-full h-full object-cover"
             />

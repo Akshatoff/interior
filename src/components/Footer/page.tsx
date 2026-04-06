@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
           <div className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden h-[250px] md:h-[350px]">
             <img
-              src="/foot.jpeg"
+              src="/foot.jpg"
               alt="Conversation"
               className="footer-img w-full h-full md:h-[120%] object-cover md:-mt-[10%]"
             />
